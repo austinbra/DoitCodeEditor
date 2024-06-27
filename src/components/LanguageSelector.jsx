@@ -42,7 +42,7 @@ import {
                     </MenuItem>
                     ))}
                 </MenuList>
-                <Button onClick={handleUndo} size='sm' mt={2} colorScheme='purple' >Undo</Button>
+                <Button onClick={handleUndo} size='sm' mt={2} colorScheme='purple' ml={4}>Undo</Button>
             </Menu>
         </Box>
     );
