@@ -2,7 +2,7 @@
 In-browser code editor. you can write and run code in browser.
 ##How to run it locally
 
-'''bash
+bash'''
 # to install all dependencies
 
 npm install
