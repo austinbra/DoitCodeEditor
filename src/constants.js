@@ -1,4 +1,4 @@
-export const LANGUAGE_VERSIONS = {
+export const LANGUAGES = {
   python: "3.10.0",
   java: "15.0.2",
   csharp: "10.0.0",
