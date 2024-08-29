@@ -1,13 +1,12 @@
 import { useRef, useState } from "react";
 import { Box, HStack } from "@chakra-ui/react";
 import { Editor } from "@monaco-editor/react";
-import LanguageSelector from "./LanguageSelector";
-import { CODE_SNIPPETS } from "../constants";
+import LanguageChooser from "./LanguageChooser";
+import { CODE_STARTER } from "../constants";
 import Output from "./Output";
 
 
 const CodeEditor = () => {
-    
     const editorRef = useRef();
     const [value, setValue] = useState("");
     const [language, setLanguage] = useState("python");
@@ -28,19 +27,10 @@ const CodeEditor = () => {
     */
 
 
-    const onMount = (editor) => {
-        editorRef.current = editor;
-        editor.focus();
-    };
-
-    const onSelect = (language) => {
-        setLanguage(language);
-        setValue(CODE_SNIPPETS[language]);
-    };
-
+    const onMount = (editor) => {editorRef.current = editor;editor.focus();};
+    const onSelect = (language) => {setLanguage(language);setValue(CODE_SNIPPETS[language]);};
     return (
         <Box>
-            
         <HStack spacing={4}>
             <Box w="50%">
                 <LanguageSelector language={'▾ ' + language } onSelect={onSelect} />
@@ -60,9 +50,7 @@ const CodeEditor = () => {
                 />
             </Box>
             <Output editorRef={editorRef} language={language} />
-        
         </HStack>
-        
         </Box>
     );
 };
