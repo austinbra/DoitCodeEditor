@@ -1,11 +1,10 @@
-import { Box } from '@chakra-ui/react';
+import {Box} from '@chakra-ui/react';
 import CodeEditor from './components/CodeEditor';
-function App() {
+function App(){
   return (
     <Box minH="100vh" bg="#0f0a17" color="gray.200" px={6} py={8}>
     <CodeEditor />
     </Box>
   )
 }
-
 export default App
