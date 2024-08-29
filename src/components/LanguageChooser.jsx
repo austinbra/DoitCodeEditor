@@ -1,21 +1,9 @@
-import {
-    Box,
-    Button,
-    Menu,
-    MenuButton,
-    MenuItem,
-    MenuList,
-    Text,
-  } from "@chakra-ui/react";
-  
-  import { LANGUAGE_VERSIONS } from "../constants";
-  
-  const languages = Object.entries(LANGUAGE_VERSIONS);
+import {Box,Button,Menu,MenuButton,MenuItem,MenuList,Text,} from "@chakra-ui/react";
+  import {LANGUAGES} from "../constants";
+  const languages = Object.entries(LANGUAGES);
   const ACTIVE_COLOR = "#625EC5";
-  
-  const LanguageSelector = ({ language, onSelect, handleUndo}) => {
+  const LanguageSelector = ({language, onSelect, handleUndo}) => {
     return (
-        
         <Box ml={2} mb={4}>
             <Text mb={2} fontSize="lg">
             Language:
@@ -27,11 +15,8 @@ import {
                     <MenuItem
                         key={lang}
                         color={lang === language ? ACTIVE_COLOR : ""}
-                        bg={lang === language ? "gray.900" : "transparent"}
-                        _hover={{
-                        color: ACTIVE_COLOR,
-                        bg: "gray.900",
-                        }}
+                        bg={lang === language ? "gray.900":"transparent"}
+                        _hover={{color: ACTIVE_COLOR,bg: "gray.900",}}
                         onClick={() => onSelect(lang)}
                     >
                         {lang}
@@ -47,4 +32,4 @@ import {
         </Box>
     );
   };
-  export default LanguageSelector;
+  export default LanguageChooser;
