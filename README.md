@@ -1,16 +1,24 @@
-# React + Vite
-In-browser code editor. you can write and run code in browser.
-##How to run it locally
+# Web-based code editor
 
-bash'''
-# to install all dependencies
+Run your code in Python, C#, Java, and JavaScript through a code editor where you can write and run code in the browser
 
+Here's how it works:
+
+1. Runs a temporary website with vite with a traditional editor interface
+2. When (run code) is pressed, it grabs code text from your input and processes it with a Piston API
+3. Returns accurate code output and errors
+
+# Imporant Info
+It uses Monaco editor with React
+
+All necessary libraries are listed at the top imports
+
+# How to run it locally
+
+```console
 npm install
 
-(if necessary)
 npm install axios
 
-# start the dev server
-
 npm run dev
-'''
+```
