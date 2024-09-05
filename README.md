@@ -13,6 +13,9 @@ It uses Monaco editor with React
 
 All necessary libraries are listed at the top imports
 
+# Program in action
+https://github.com/user-attachments/assets/39801c08-f6af-4229-ba95-e3c53a64c15a
+
 # How to run it locally
 
 ```console
